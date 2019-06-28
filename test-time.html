@@ -1,0 +1,34 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script src="./time.js"></script>
+</head>
+<body>
+<div id="log">hello world</div>
+<script type="text/javascript">
+    var debug = true;
+    var set_val = false;
+    function show(msg) {
+        if(debug) {
+            var log = $("#log");
+            log.append("<div>" + msg + "</div>");
+        }
+    }
+
+    function set_val_true(msg) {
+        show(msg);
+        set_val = true;
+    }
+
+    function is_set_val() {
+        return set_val;
+    }
+
+    show("start");
+    sleep(1000, show, "sleep ok");
+    wait_times_until(2000, 3, function(){return false}, set_val_true, "yes");
+    wait_until(10000, is_set_val, show, "10000");
+    show("end");
+</script>
+</body>
+</html>
