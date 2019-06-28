@@ -22,7 +22,7 @@ e.g. wait\_times\until(1000, 10, null, function(args) {console.log(args)}, 'afte
 
 wait ms milliseconds or is\_true\_func return true, then run the function run\_func(args).
 
-This is syntactic sugar for wait\_times\_untils. just split ms with interval 100 every time.
+This is syntactic sugar for wait\_times\_until. just split ms with interval 100 every time.
 
 ### `wait_do(ms, run_func, args)`
 
@@ -30,4 +30,4 @@ wait ms milliseconds, and do run\_func(args).
 
 ### sleep
 
-alias of wait\_do.
+alias of wait\_do().
